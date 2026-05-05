@@ -22,11 +22,15 @@ interface AuthContextValue {
 const AuthContext = createContext<AuthContextValue | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-    const [user, setUser] = useState<any>(mockUser);
+    const [user, setUser] = useState<any>(null);
     const [authModalOpen, setAuthModalOpen] = useState(false);
 
-    const signIn = async () => ({ data: { user: mockUser }, error: null });
-    const signUp = async () => ({ data: { user: mockUser }, error: null });
+    const signIn = {
+        email: async () => { setUser(mockUser); return { data: { user: mockUser }, error: null }; }
+    };
+    const signUp = {
+        email: async () => { setUser(mockUser); return { data: { user: mockUser }, error: null }; }
+    };
     const signOut = async () => { setUser(null); return { error: null }; };
 
     return (
