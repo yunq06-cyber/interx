@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* 品牌核心颜色 */
+  --color-brand-green: #39FF14;
+  --color-brand-blue: #0022FF;
+
+  /* 品牌字体 */
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-space-mono: "Space Mono", monospace;
+
+  /* 遵循 Vercel 规范的深色背景 */
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: var(--font-space-grotesk);
+  }
+}

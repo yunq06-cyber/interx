@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "KVHi6Sr4Tj5iRlKk9aoFm"
+uri = "file://artifacts/interx/src/assets/headphones.png"
+type = "image"
+title = "Sony WH-1000XM5 headphones floating"
+
+[[generated]]
+id = "nLCcOzPKRlXsjLB6ppw31"
+uri = "file://artifacts/interx/src/assets/camera.png"
+type = "image"
+title = "vintage Leica M3 camera floating"
+
+[[generated]]
+id = "5aoIxiEhjYSZ-FVEMSGFF"
+uri = "file://artifacts/interx/src/assets/sneakers.png"
+type = "image"
+title = "Nike Air Jordan 1 retro"
+
+[[generated]]
+id = "o7Yw6rKRxM1hb6eWPMpPS"
+uri = "file://artifacts/interx/src/assets/console.png"
+type = "image"
+title = "PlayStation 5 console side view"

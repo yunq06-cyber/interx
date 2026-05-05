@@ -1,0 +1,23 @@
+Please revamp the background visual layer of the hero section to look premium, complex, and sophisticated, replacing the static, plain central grid map and background blurs (as seen in image_4.png). Preserve the existing text ('中韩好物，无缝流转。' and the sub-headline) and the two buttons ('立即交易', '浏览商品'), keeping them perfectly centered and clear.
+
+1. Visually Core: The Asian Half-Globe
+
+Create a massive, detailed, yet subtle, dark metal half-globe in the background. Position it to show the lower-right half of the earth, focusing on the Asian continent. The globe itself should be dark, with landmasses represented by a sparse, dark-metal wireframe texture.
+
+2. The Asia Trading Network (Animation)
+
+Overlay a complex, dense network of interconnected nodes and lines covering all countries in Asia. This network should use our signature neon green-to-deep blue gradient.
+
+Primary Animation (Living Network): The network nodes and lines must slowly and organically pulse with a breathing effect, like a living neural network or data grid.
+
+Highlighted Connection (Core Business): Special emphasis must be placed on a connection route between the Korean region (represented by a specific node like Seoul) and the Chinese region (represented by nodes like Shanghai and Beijing). This path should be slightly brighter and pulse with a different, faster rhythm to draw attention.
+
+Data Meteors: Introduce small, bright neon 'data meteors' that streak rapidly and infrequently along random network paths, simulating real-time transactions across the continent.
+
+3. Technical & Styling
+
+Add a very slow, subtle, almost undetectable axial rotation to the entire half-globe.
+
+Use massive blurs (blur-3xl or custom values) and extremely low opacity (around 10-15%) for the distant network elements to prevent clutter.
+
+Use Tailwind's absolute and z-index layering to place this complexity behind the existing text and buttons. The visual must be sophisticated and interactive (e.g., subtle shift on mouse hover) but not block clicks on content. Overall vibe: Apple launch sophisticated Web3.

@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "interX"
+version = "1.0.0"
+id = "artifacts/interx"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24493
+
+[services.development]
+run = "pnpm --filter @workspace/interx run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/interx", "run", "build" ]
+publicDir = "artifacts/interx/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24493"
+BASE_PATH = "/"
