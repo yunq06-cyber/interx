@@ -220,7 +220,6 @@ export function NFCSecuritySection() {
             </div>
           </div>
         </div>
-        </div>
       </div>
     </section>
   );
