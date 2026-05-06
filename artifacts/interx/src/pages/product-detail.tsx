@@ -140,13 +140,15 @@ export default function ProductDetail() {
           <div className="space-y-4">
             <motion.div
               key={activeImage}
+              layoutId={activeImage === 0 ? `product-card-${product.id}` : undefined}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
-              className="relative aspect-square rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/8 flex items-center justify-center group"
+              className="relative aspect-square rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/8 flex items-center justify-center group will-change-transform"
               data-testid="main-image"
             >
-              <img
+              <motion.img
+                layoutId={activeImage === 0 ? `product-image-${product.id}` : undefined}
                 src={product.images[activeImage]}
                 alt={product.title}
                 className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"

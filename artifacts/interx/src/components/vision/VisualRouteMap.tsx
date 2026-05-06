@@ -69,6 +69,7 @@ export const VisualRouteMap = memo(function VisualRouteMap() {
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{ pathLength: 1, opacity: 1 }}
           transition={{ duration: 2, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+          style={{ willChange: "transform, path-length" } as any}
         />
         {/* Ghost path for animateMotion reference */}
         <path id="vr-path" d="M 232 88 C 232 200 88 120 88 232" fill="none" />
@@ -77,7 +78,8 @@ export const VisualRouteMap = memo(function VisualRouteMap() {
         {[0, 1.1, 2.2].map((begin, i) => (
           <circle key={i} r={i === 0 ? 5 : 3.5}
             fill={i === 0 ? "#39FF14" : "rgba(57,255,20,0.55)"}
-            filter="url(#line-glow)">
+            filter="url(#line-glow)"
+            style={{ willChange: "transform, opacity" }}>
             <animateMotion dur="3.3s" begin={`${begin}s`} repeatCount="indefinite" calcMode="spline"
               keySplines="0.4 0 0.2 1">
               <mpath href="#vr-path" />

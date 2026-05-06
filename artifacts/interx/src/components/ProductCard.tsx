@@ -45,8 +45,9 @@ export function ProductCard({ id, title, image, price, location, flag, condition
   return (
     <>
       <motion.div
+        layoutId={`product-card-${id}`}
         whileHover={{ y: -5 }}
-        className="group relative bg-[#0a0a0a] border border-white/5 hover:border-[#39FF14]/50 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(57,255,20,0.15)] flex flex-col cursor-pointer"
+        className="group relative bg-[#0a0a0a] border border-white/5 hover:border-[#39FF14]/50 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(57,255,20,0.15)] flex flex-col cursor-pointer will-change-transform"
         data-testid={`product-card-${id}`}
         onClick={() => setLocation(`/product/${id}`)}
       >
@@ -67,7 +68,8 @@ export function ProductCard({ id, title, image, price, location, flag, condition
             {conditionLabel[condition]}
           </Badge>
 
-          <img
+          <motion.img
+            layoutId={`product-image-${id}`}
             src={image}
             alt={title}
             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl"
