@@ -43,17 +43,17 @@ export function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="w-full flex items-center justify-between p-5 sm:p-6 text-left"
                 >
-                  <span className={`text-lg font-semibold tracking-tight transition-colors ${
+                  <span className={`text-base sm:text-lg font-semibold tracking-tight transition-colors ${
                     isOpen ? "text-[#39FF14]" : "text-gray-200"
                   }`}>
                     {item.q}
                   </span>
-                  <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                  <div className={`shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all ${
                     isOpen ? "bg-[#39FF14] text-black" : "bg-white/5 text-gray-500"
                   }`}>
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    {isOpen ? <Minus className="w-3 h-3 sm:w-4 sm:h-4" /> : <Plus className="w-3 h-3 sm:w-4 sm:h-4" />}
                   </div>
                 </button>
 
@@ -65,7 +65,7 @@ export function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 text-gray-400 leading-relaxed text-base border-t border-white/5 pt-4">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 leading-relaxed text-sm sm:text-base border-t border-white/5 pt-4">
                         {item.a}
                       </div>
                     </motion.div>

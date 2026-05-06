@@ -161,53 +161,64 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0a0a0a]/95 border-t border-white/10 px-4 pb-6 pt-4 flex flex-col gap-3">
-          <a href="#xianyu-portal" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-sm font-medium py-2">{t.nav.market}</a>
-          <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-sm font-medium py-2">{t.nav.howItWorks}</a>
-          <a href="#faq" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-sm font-medium py-2">{t.nav.faq}</a>
-          <a href="#about"  onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-sm font-medium py-2">{t.nav.about}</a>
-          <div className="flex gap-3 mt-2">
+        <div className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/10 px-6 pb-8 pt-6 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top duration-300">
+          <div className="flex flex-col gap-1">
+            <a href="#xianyu-portal" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-base font-medium py-3 border-b border-white/5">{t.nav.market}</a>
+            <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-base font-medium py-3 border-b border-white/5">{t.nav.howItWorks}</a>
+            <a href="#faq" onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-base font-medium py-3 border-b border-white/5">{t.nav.faq}</a>
+            <a href="#about"  onClick={() => setMobileOpen(false)} className="text-gray-300 hover:text-white text-base font-medium py-3">{t.nav.about}</a>
+          </div>
+          
+          <div className="h-px bg-white/10 my-2" />
+
+          <div className="flex flex-col gap-4">
             {user ? (
-               <div className="flex-1 flex items-center justify-between bg-white/5 border border-white/10 rounded-full px-4 py-2">
+               <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
                   <div className="flex items-center gap-3">
-                    <UserIcon className="w-4 h-4 text-[#39FF14]" />
+                    <div className="w-10 h-10 rounded-full bg-[#39FF14]/10 border border-[#39FF14]/30 flex items-center justify-center">
+                      <UserIcon className="w-5 h-5 text-[#39FF14]" />
+                    </div>
                     <span className="text-white text-sm font-bold">{user.name}</span>
                   </div>
-                  <button onClick={() => signOut()} className="text-zinc-500 text-xs uppercase font-mono tracking-widest">Out</button>
+                  <button onClick={() => signOut()} className="text-zinc-500 text-[10px] uppercase font-mono tracking-widest bg-white/5 px-3 py-1 rounded-full border border-white/10">Sign Out</button>
                </div>
             ) : (
-              <>
+              <div className="flex flex-col gap-3">
                 <Button 
-                  variant="ghost" 
-                  className="flex-1 text-white hover:bg-white/10 font-mono text-xs uppercase tracking-widest"
+                  variant="outline" 
+                  className="w-full text-white border-white/10 hover:bg-white/10 font-mono text-xs uppercase tracking-widest py-6 rounded-xl"
                   onClick={() => { setAuthModalOpen(true); setMobileOpen(false); }}
                 >
                   {t.nav.login}
                 </Button>
                 <Button 
-                  className="flex-1 text-black font-bold border-0 rounded-full" 
+                  className="w-full text-black font-bold border-0 rounded-xl py-6 shadow-[0_0_15px_rgba(57,255,20,0.2)]" 
                   style={{ background: 'linear-gradient(135deg, #39FF14, #0022FF)' }}
                   onClick={() => { setAuthModalOpen(true); setMobileOpen(false); }}
                 >
                   {t.nav.signUp}
                 </Button>
-              </>
+              </div>
             )}
           </div>
-          <div className="flex gap-2 mt-2">
-            {LANGS.map((l) => (
-              <button
-                key={l.code}
-                onClick={() => setLang(l.code)}
-                className={`flex-1 text-xs font-mono py-2 border rounded transition-colors ${
-                  lang === l.code
-                    ? "border-[#39FF14] text-[#39FF14] bg-[#39FF14]/10"
-                    : "border-white/10 text-gray-400 hover:text-white"
-                }`}
-              >
-                {l.native}
-              </button>
-            ))}
+
+          <div className="mt-4">
+            <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3 px-1">Select Language</p>
+            <div className="flex gap-2">
+              {LANGS.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => { setLang(l.code); }}
+                  className={`flex-1 text-[10px] font-mono py-3 border rounded-xl transition-all ${
+                    lang === l.code
+                      ? "border-[#39FF14] text-[#39FF14] bg-[#39FF14]/10 font-bold"
+                      : "border-white/10 text-gray-400 hover:text-white"
+                  }`}
+                >
+                  {l.native}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}

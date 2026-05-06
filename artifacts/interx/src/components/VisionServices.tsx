@@ -80,20 +80,20 @@ export function VisionServices() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left column: Text content */}
-          <div className="space-y-12">
+          <div className="space-y-6 md:space-y-12 order-2 lg:order-1">
             {localizedSections.map((section, idx) => (
               <motion.div
                 key={section.id}
                 onMouseEnter={() => setActiveIndex(idx)}
                 onClick={() => setActiveIndex(idx)}
-                className={`group cursor-pointer transition-all duration-500 p-6 rounded-2xl border ${
+                className={`group cursor-pointer transition-all duration-500 p-5 md:p-6 rounded-2xl border ${
                   activeIndex === idx 
                     ? "bg-white/[0.03] border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.5)]" 
                     : "bg-transparent border-transparent opacity-40 hover:opacity-70"
                 }`}
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className={`text-[10px] uppercase tracking-[0.3em] font-mono font-bold px-2 py-0.5 rounded ${
+                <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                  <span className={`text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-mono font-bold px-2 py-0.5 rounded ${
                     activeIndex === idx ? "text-[#39FF14] bg-[#39FF14]/10" : "text-gray-500"
                   }`}>
                     {section.tag}
@@ -103,13 +103,13 @@ export function VisionServices() {
                   }`} />
                 </div>
                 
-                <h3 className={`text-2xl md:text-3xl font-bold tracking-tight mb-4 transition-colors ${
+                <h3 className={`text-xl md:text-3xl font-bold tracking-tight mb-3 md:mb-4 transition-colors ${
                   activeIndex === idx ? "text-white" : "text-gray-400 group-hover:text-gray-200"
                 }`}>
                   {section.title}
                 </h3>
                 
-                <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                <p className="text-gray-400 leading-relaxed text-xs md:text-base">
                   {section.text}
                 </p>
               </motion.div>
@@ -117,26 +117,26 @@ export function VisionServices() {
           </div>
 
           {/* Right column: Dynamic Visuals */}
-          <div className="relative aspect-square md:aspect-[4/3] lg:aspect-auto lg:h-[600px] group">
+          <div className="relative aspect-[4/3] sm:aspect-square lg:aspect-auto lg:h-[600px] group order-1 lg:order-2">
             {/* Ambient glow */}
-            <div className="absolute -inset-20 bg-gradient-to-br from-[#0022FF]/10 via-transparent to-[#39FF14]/10 blur-[100px] opacity-50" />
+            <div className="absolute -inset-10 md:-inset-20 bg-gradient-to-br from-[#0022FF]/10 via-transparent to-[#39FF14]/10 blur-[60px] md:blur-[100px] opacity-50" />
             
-            <div className="relative h-full w-full bg-[#050505] rounded-3xl border border-white/10 overflow-hidden shadow-2xl flex flex-col">
+            <div className="relative h-full w-full bg-[#050505] rounded-2xl md:rounded-3xl border border-white/10 overflow-hidden shadow-2xl flex flex-col">
               {/* Toolbar decoration */}
-              <div className="h-10 border-b border-white/5 flex items-center justify-between px-6 bg-zinc-900/20">
+              <div className="h-8 md:h-10 border-b border-white/5 flex items-center justify-between px-4 md:px-6 bg-zinc-900/20">
                 <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                  <div className="w-2 h-2 rounded-full bg-white/10" />
+                  <div className="w-2 h-2 rounded-full bg-white/10" />
+                  <div className="w-2 h-2 rounded-full bg-white/10" />
                 </div>
-                <div className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#39FF14] animate-pulse" />
+                <div className="text-[8px] md:text-[9px] font-mono text-zinc-500 uppercase tracking-widest flex items-center gap-2">
+                  <span className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#39FF14] animate-pulse" />
                   Live simulation
                 </div>
               </div>
 
               {/* Main Visual Display */}
-              <div className="flex-1 p-4 md:p-8 relative overflow-hidden">
+              <div className="flex-1 p-2 md:p-8 relative overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeIndex}
@@ -154,18 +154,18 @@ export function VisionServices() {
               </div>
 
               {/* Footer info strip */}
-              <div className="h-20 border-t border-white/5 flex items-center justify-between px-8 bg-zinc-900/10">
-                <div className="space-y-1">
-                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+              <div className="h-16 md:h-20 border-t border-white/5 flex items-center justify-between px-5 md:px-8 bg-zinc-900/10">
+                <div className="space-y-0.5 md:space-y-1">
+                  <p className="text-[8px] md:text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
                     {visualLabels[activeIndex].line1}
                   </p>
-                  <p className="text-xs font-bold text-white tracking-wide">
+                  <p className="text-[10px] md:text-xs font-bold text-white tracking-wide">
                     {visualLabels[activeIndex].line2}
                   </p>
                 </div>
-                <div className="flex -space-x-2">
+                <div className="flex -space-x-1.5 md:-space-x-2">
                   {[...Array(3)].map((_, i) => (
-                    <div key={i} className="w-6 h-6 rounded-full border-2 border-black bg-zinc-800 flex items-center justify-center overflow-hidden">
+                    <div key={i} className="w-5 h-5 md:w-6 md:h-6 rounded-full border border-black bg-zinc-800 flex items-center justify-center overflow-hidden">
                       <div className="w-full h-full bg-gradient-to-br from-zinc-700 to-zinc-900" />
                     </div>
                   ))}

@@ -45,10 +45,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...spring, delay: 0 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 text-center w-full leading-[1.2] text-balance"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 md:mb-8 text-center w-full leading-[1.2] text-balance"
           >
             <span className="block text-white mb-2">{t.hero.line1}</span>
-            <span className="relative block py-2">
+            <span className="relative block py-1 md:py-2">
               {/* Main Text Layer */}
               <motion.span
                 className="relative block bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#0022FF] to-[#39FF14]"
@@ -65,7 +65,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...spring, delay: 0.2 }}
-            className="text-center text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-16 leading-relaxed text-balance"
+            className="text-center text-base sm:text-lg md:text-2xl text-gray-400 max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed text-balance px-4 sm:px-0"
           >
             {t.hero.sub}
           </motion.p>
@@ -74,7 +74,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...spring, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-8 w-full"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 w-full max-w-md sm:max-w-none"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -84,7 +84,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 onClick={() => setChatOpen(true)}
-                className="w-full sm:w-auto text-black font-bold text-xl px-12 py-8 rounded-full hover:opacity-90 transition-all shadow-[0_0_25px_rgba(57,255,20,0.5)] hover:shadow-[0_0_40px_rgba(57,255,20,0.7)] border-none cursor-pointer"
+                className="w-full sm:w-auto text-black font-bold text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 rounded-full hover:opacity-90 transition-all shadow-[0_0_20px_rgba(57,255,20,0.4)] hover:shadow-[0_0_40px_rgba(57,255,20,0.7)] border-none cursor-pointer"
                 style={{ background: "linear-gradient(135deg, #39FF14, #0022FF)" }}
                 data-testid="hero-cta-primary"
                 aria-label={t.hero.cta1}
@@ -96,7 +96,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               asChild
-              className="w-full sm:w-auto text-white border-white/20 bg-white/5 backdrop-blur-md hover:border-[#39FF14] hover:bg-[#39FF14]/10 text-xl px-12 py-8 rounded-full transition-all"
+              className="w-full sm:w-auto text-white border-white/20 bg-white/5 backdrop-blur-md hover:border-[#39FF14] hover:bg-[#39FF14]/10 text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 rounded-full transition-all"
               data-testid="hero-cta-secondary"
             >
               <a href="#how-it-works">

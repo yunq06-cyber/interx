@@ -26,28 +26,28 @@ export function XianyuPortal() {
           {/* Dynamic Gradient Border (Simulated with pseudo-elements in Tailwind) */}
           <div className="absolute -inset-[1px] bg-gradient-to-r from-[#39FF14] via-[#0022FF] to-[#39FF14] rounded-2xl opacity-30 group-hover:opacity-100 transition-opacity duration-500 blur-[2px]" />
           
-          <div className="relative bg-[#050505] rounded-2xl p-8 md:p-16 flex flex-col items-center text-center">
+          <div className="relative bg-[#050505] rounded-2xl p-6 sm:p-8 md:p-16 flex flex-col items-center text-center">
             <motion.div
               animate={{ 
                 boxShadow: ["0 0 0px rgba(57,255,20,0)", "0 0 20px rgba(57,255,20,0.2)", "0 0 0px rgba(57,255,20,0)"]
               }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="w-20 h-20 bg-black border border-white/10 rounded-full flex items-center justify-center mb-8"
+              className="w-16 h-16 sm:w-20 sm:h-20 bg-black border border-white/10 rounded-full flex items-center justify-center mb-6 sm:mb-8"
             >
-              <ExternalLink className="w-8 h-8 text-[#39FF14]" />
+              <ExternalLink className="w-6 h-6 sm:w-8 sm:h-8 text-[#39FF14]" />
             </motion.div>
 
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-sans">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-4 sm:mb-6 font-sans">
               {t.portal.title}
             </h2>
             
-            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
               {t.portal.desc}
             </p>
 
             <Button
               size="lg"
-              className="text-black font-bold text-lg px-10 py-7 rounded-full transition-all hover:scale-110 shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_35px_rgba(57,255,20,0.5)] border-none"
+              className="w-full sm:w-auto text-black font-bold text-base sm:text-lg px-10 py-6 sm:py-7 rounded-full transition-all hover:scale-110 shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_35px_rgba(57,255,20,0.5)] border-none"
               style={{ background: "linear-gradient(135deg, #39FF14, #0022FF)" }}
             >
               {t.portal.cta}

@@ -125,17 +125,17 @@ export default function ProductDetail() {
     <div className="min-h-screen bg-black text-white font-sans selection:bg-[#39FF14] selection:text-black">
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 sm:pb-20">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-gray-500 font-mono mb-8" data-testid="breadcrumb">
-          <Link href="/" className="hover:text-[#39FF14] transition-colors">{p.home}</Link>
-          <span>/</span>
-          <span className="hover:text-[#39FF14] cursor-pointer transition-colors">{product.category}</span>
-          <span>/</span>
-          <span className="text-gray-300 truncate max-w-xs">{product.title}</span>
+        <nav className="flex items-center gap-2 text-[10px] sm:text-xs text-gray-500 font-mono mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-2 sm:pb-0 no-scrollbar" data-testid="breadcrumb">
+          <Link href="/" className="hover:text-[#39FF14] transition-colors shrink-0">{p.home}</Link>
+          <span className="shrink-0">/</span>
+          <span className="hover:text-[#39FF14] cursor-pointer transition-colors shrink-0">{product.category}</span>
+          <span className="shrink-0">/</span>
+          <span className="text-gray-300 truncate max-w-[150px] sm:max-w-xs shrink-0">{product.title}</span>
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16">
           {/* LEFT — Image Gallery */}
           <div className="space-y-4">
             <motion.div
@@ -144,52 +144,52 @@ export default function ProductDetail() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.25 }}
-              className="relative aspect-square rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/8 flex items-center justify-center group will-change-transform"
+              className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/8 flex items-center justify-center group will-change-transform"
               data-testid="main-image"
             >
               <motion.img
                 layoutId={activeImage === 0 ? `product-image-${product.id}` : undefined}
                 src={product.images[activeImage]}
                 alt={product.title}
-                className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-contain p-4 sm:p-8 group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-4 left-4">
-                <Badge className={`${conditionStyles[product.condition]} border font-mono uppercase text-[10px] tracking-widest px-3 py-1 rounded-none`}>
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
+                <Badge className={`${conditionStyles[product.condition]} border font-mono uppercase text-[9px] sm:text-[10px] tracking-widest px-2 sm:px-3 py-1 rounded-none`}>
                   {conditionLabel[product.condition as "Mint" | "Good" | "Fair"]}
                 </Badge>
               </div>
               <button
                 onClick={() => setSaved(!saved)}
-                className={`absolute top-4 right-4 p-3 rounded-full border backdrop-blur-sm transition-all ${saved ? "bg-[#39FF14]/20 border-[#39FF14] text-[#39FF14]" : "bg-black/50 border-white/10 text-white hover:border-[#39FF14] hover:text-[#39FF14]"}`}
+                className={`absolute top-3 right-3 sm:top-4 sm:right-4 p-2.5 sm:p-3 rounded-full border backdrop-blur-sm transition-all ${saved ? "bg-[#39FF14]/20 border-[#39FF14] text-[#39FF14]" : "bg-black/50 border-white/10 text-white hover:border-[#39FF14] hover:text-[#39FF14]"}`}
                 data-testid="save-button"
               >
-                <Heart className={`w-5 h-5 ${saved ? "fill-[#39FF14]" : ""}`} />
+                <Heart className={`w-4 h-4 sm:w-5 sm:h-5 ${saved ? "fill-[#39FF14]" : ""}`} />
               </button>
-              <div className="absolute bottom-4 right-4 flex items-center gap-3 text-xs text-gray-400 font-mono bg-black/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-gray-400 font-mono bg-black/60 backdrop-blur-sm px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10">
                 <span className="flex items-center gap-1"><Eye className="w-3 h-3" />{product.views.toLocaleString()}</span>
                 <span className="flex items-center gap-1"><Bookmark className="w-3 h-3" />{product.saves}</span>
               </div>
             </motion.div>
 
             {/* Thumbnails */}
-            <div className="flex gap-3" data-testid="image-thumbnails">
+            <div className="flex gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-1 sm:pb-0" data-testid="image-thumbnails">
               {product.images.map((img, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveImage(i)}
-                  className={`relative flex-1 aspect-square rounded-xl overflow-hidden border-2 transition-all ${i === activeImage ? "border-[#39FF14] shadow-[0_0_12px_rgba(57,255,20,0.4)]" : "border-white/5 hover:border-white/20"}`}
+                  className={`relative flex-shrink-0 w-16 h-16 sm:w-auto sm:flex-1 aspect-square rounded-lg sm:rounded-xl overflow-hidden border-2 transition-all ${i === activeImage ? "border-[#39FF14] shadow-[0_0_12px_rgba(57,255,20,0.4)]" : "border-white/5 hover:border-white/20"}`}
                   data-testid={`thumbnail-${i}`}
                 >
-                  <img src={img} alt="" className="w-full h-full object-contain p-3 bg-[#0a0a0a]" />
+                  <img src={img} alt="" className="w-full h-full object-contain p-2 sm:p-3 bg-[#0a0a0a]" />
                 </button>
               ))}
             </div>
 
             {/* Stats row */}
-            <div className="flex items-center gap-2 text-xs text-gray-500 font-mono">
+            <div className="flex items-center gap-2 text-[10px] sm:text-xs text-gray-500 font-mono">
               <Clock className="w-3 h-3" />
               <span>{p.listed} {product.listedAt}</span>
-              <span className="mx-2 text-gray-700">·</span>
+              <span className="mx-1 sm:mx-2 text-gray-700">·</span>
               <Globe2 className="w-3 h-3" />
               <span>{product.location}</span>
             </div>
@@ -198,28 +198,28 @@ export default function ProductDetail() {
           {/* RIGHT — Details */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-mono text-[#39FF14] border border-[#39FF14]/30 px-2 py-0.5 uppercase tracking-widest">{product.category}</span>
+              <span className="text-[10px] font-mono text-[#39FF14] border border-[#39FF14]/30 px-2 py-0.5 uppercase tracking-widest">{product.category}</span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight" data-testid="product-title">
+            <h1 className="text-xl sm:text-3xl font-bold text-white leading-tight" data-testid="product-title">
               {product.title}
             </h1>
 
             {/* Web3 Verified badge */}
             {verified && cert && (
-              <div>
-                <Web3Badge size="md" onClick={() => setCertOpen(true)} />
+              <div className="flex">
+                <Web3Badge size="sm" onClick={() => setCertOpen(true)} className="sm:scale-110 sm:origin-left" />
               </div>
             )}
 
             {/* Currency Converter */}
-            <div className="rounded-xl border border-white/8 bg-[#0a0a0a] p-5 space-y-4" data-testid="currency-converter">
+            <div className="rounded-xl border border-white/8 bg-[#0a0a0a] p-4 sm:p-5 space-y-4" data-testid="currency-converter">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">{p.price}</span>
+                <span className="text-[10px] sm:text-xs font-mono text-gray-500 uppercase tracking-widest">{p.price}</span>
                 <div className="relative">
                   <button
                     onClick={() => setCurrencyOpen(!currencyOpen)}
-                    className="flex items-center gap-2 text-xs font-mono text-gray-300 border border-white/10 hover:border-[#39FF14]/50 px-3 py-1.5 rounded-lg transition-all"
+                    className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-mono text-gray-300 border border-white/10 hover:border-[#39FF14]/50 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg transition-all"
                     data-testid="currency-selector"
                   >
                     <span>{EXCHANGE_RATES[selectedCurrency]?.flag}</span>
@@ -232,13 +232,13 @@ export default function ProductDetail() {
                         initial={{ opacity: 0, y: -8 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -8 }}
-                        className="absolute right-0 top-full mt-2 z-50 bg-[#111] border border-white/10 rounded-xl overflow-hidden min-w-[180px] shadow-xl"
+                        className="absolute right-0 top-full mt-2 z-50 bg-[#111] border border-white/10 rounded-xl overflow-hidden min-w-[160px] sm:min-w-[180px] shadow-xl"
                       >
                         {Object.entries(EXCHANGE_RATES).map(([code, info]) => (
                           <button
                             key={code}
                             onClick={() => { setSelectedCurrency(code); setCurrencyOpen(false); }}
-                            className={`w-full flex items-center gap-3 px-4 py-2.5 text-xs font-mono hover:bg-[#39FF14]/10 transition-colors ${selectedCurrency === code ? "text-[#39FF14]" : "text-gray-300"}`}
+                            className={`w-full flex items-center gap-3 px-3 sm:px-4 py-2 sm:py-2.5 text-[10px] sm:text-xs font-mono hover:bg-[#39FF14]/10 transition-colors ${selectedCurrency === code ? "text-[#39FF14]" : "text-gray-300"}`}
                             data-testid={`currency-option-${code}`}
                           >
                             <span>{info.flag}</span>
@@ -252,16 +252,16 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              <div className="flex items-end gap-3">
+              <div className="flex items-end gap-2 sm:gap-3">
                 <span
-                  className="text-4xl font-mono font-bold"
+                  className="text-2xl sm:text-4xl font-mono font-bold"
                   style={{ background: "linear-gradient(135deg, #39FF14, #0022FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
                   data-testid="converted-price"
                 >
                   {convertedPrice.symbol}{convertedPrice.value}
                 </span>
                 {selectedCurrency !== "USD" && (
-                  <span className="text-gray-500 text-sm font-mono mb-1">(${product.price.toLocaleString()} USD)</span>
+                  <span className="text-gray-500 text-xs sm:text-sm font-mono mb-1 shrink-0">(${product.price.toLocaleString()} USD)</span>
                 )}
               </div>
 
@@ -274,11 +274,11 @@ export default function ProductDetail() {
                     <button
                       key={code}
                       onClick={() => setSelectedCurrency(code)}
-                      className={`p-3 rounded-lg border text-left transition-all ${selectedCurrency === code ? "border-[#39FF14]/50 bg-[#39FF14]/5" : "border-white/5 bg-black hover:border-white/15"}`}
+                      className={`p-2 sm:p-3 rounded-lg border text-left transition-all ${selectedCurrency === code ? "border-[#39FF14]/50 bg-[#39FF14]/5" : "border-white/5 bg-black hover:border-white/15"}`}
                       data-testid={`quick-currency-${code}`}
                     >
-                      <div className="text-[10px] font-mono text-gray-500 mb-1">{r.flag} {code}</div>
-                      <div className="text-sm font-mono font-bold text-white">{r.symbol}{formatted}</div>
+                      <div className="text-[9px] sm:text-[10px] font-mono text-gray-500 mb-0.5 sm:mb-1">{r.flag} {code}</div>
+                      <div className="text-xs sm:text-sm font-mono font-bold text-white truncate">{r.symbol}{formatted}</div>
                     </button>
                   );
                 })}
@@ -286,28 +286,28 @@ export default function ProductDetail() {
             </div>
 
             {/* Shipping Calculator */}
-            <div className="rounded-xl border border-white/8 bg-[#0a0a0a] p-5 space-y-4" data-testid="shipping-calculator">
+            <div className="rounded-xl border border-white/8 bg-[#0a0a0a] p-4 sm:p-5 space-y-4" data-testid="shipping-calculator">
               <div className="flex items-center gap-2">
                 <Truck className="w-4 h-4 text-[#39FF14]" />
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">{p.shippingCalc}</span>
+                <span className="text-[10px] sm:text-xs font-mono text-gray-500 uppercase tracking-widest">{p.shippingCalc}</span>
               </div>
 
-              <div className="flex items-center gap-2 text-sm">
-                <MapPin className="w-3.5 h-3.5 text-gray-500 flex-shrink-0" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm">
+                <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-gray-500 flex-shrink-0" />
                 <span className="text-gray-400">{p.from}</span>
-                <span className="font-mono text-white">{product.flag} {product.location}</span>
+                <span className="font-mono text-white whitespace-nowrap">{product.flag} {product.location}</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <span className="text-gray-400 text-sm flex-shrink-0">{p.to}</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span className="text-gray-400 text-xs sm:text-sm flex-shrink-0">{p.to}</span>
                 <div className="relative flex-1">
                   <button
                     onClick={() => setDestOpen(!destOpen)}
-                    className="w-full flex items-center justify-between gap-2 text-sm font-mono text-white border border-white/10 hover:border-[#39FF14]/50 px-4 py-2.5 rounded-lg transition-all bg-black"
+                    className="w-full flex items-center justify-between gap-2 text-xs sm:text-sm font-mono text-white border border-white/10 hover:border-[#39FF14]/50 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg transition-all bg-black"
                     data-testid="destination-selector"
                   >
-                    <span>{DESTINATION_OPTIONS.find((d) => d.code === destination)?.flag} {DESTINATION_OPTIONS.find((d) => d.code === destination)?.label}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${destOpen ? "rotate-180" : ""}`} />
+                    <span className="truncate">{DESTINATION_OPTIONS.find((d) => d.code === destination)?.flag} {DESTINATION_OPTIONS.find((d) => d.code === destination)?.label}</span>
+                    <ChevronDown className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform ${destOpen ? "rotate-180" : ""}`} />
                   </button>
                   <AnimatePresence>
                     {destOpen && (
@@ -321,7 +321,7 @@ export default function ProductDetail() {
                           <button
                             key={opt.code}
                             onClick={() => { setDestination(opt.code); setDestOpen(false); }}
-                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-mono hover:bg-[#39FF14]/10 transition-colors ${destination === opt.code ? "text-[#39FF14]" : "text-gray-300"}`}
+                            className={`w-full flex items-center gap-3 px-3 sm:px-4 py-2.5 sm:py-3 text-[10px] sm:text-sm font-mono hover:bg-[#39FF14]/10 transition-colors ${destination === opt.code ? "text-[#39FF14]" : "text-gray-300"}`}
                             data-testid={`destination-option-${opt.code}`}
                           >
                             <span>{opt.flag}</span>
@@ -339,29 +339,29 @@ export default function ProductDetail() {
                   key={destination}
                   initial={{ opacity: 0, y: 4 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center justify-between rounded-lg border border-[#39FF14]/20 bg-[#39FF14]/5 px-4 py-3"
+                  className="flex items-center justify-between rounded-lg border border-[#39FF14]/20 bg-[#39FF14]/5 px-3 sm:px-4 py-2.5 sm:py-3"
                   data-testid="shipping-result"
                 >
                   <div>
-                    <div className="text-xs text-gray-400 font-mono">{p.estShipping}</div>
-                    <div className="text-lg font-mono font-bold text-[#39FF14] mt-0.5">
+                    <div className="text-[10px] sm:text-xs text-gray-400 font-mono">{p.estShipping}</div>
+                    <div className="text-base sm:text-lg font-mono font-bold text-[#39FF14] mt-0.5">
                   {shippingInfo.cost === 0 ? "Free shipping" : `${shippingInfo.cost} USD`}
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xs text-gray-400 font-mono">{p.deliveryTime}</div>
-                    <div className="text-sm font-mono text-white mt-0.5">{shippingInfo.days} {p.businessDays}</div>
+                    <div className="text-[10px] sm:text-xs text-gray-400 font-mono">{p.deliveryTime}</div>
+                    <div className="text-xs sm:text-sm font-mono text-white mt-0.5 whitespace-nowrap">{shippingInfo.days} {p.businessDays}</div>
                   </div>
                 </motion.div>
               )}
 
-              <p className="text-[11px] text-gray-600 font-mono">{p.shippingNote}</p>
+              <p className="text-[10px] sm:text-[11px] text-gray-600 font-mono">{p.shippingNote}</p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3" data-testid="cta-buttons">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2" data-testid="cta-buttons">
               <Button
-                className="flex-1 h-14 text-black font-bold uppercase tracking-widest text-sm border-none hover:opacity-90 transition-opacity"
+                className="flex-1 h-12 sm:h-14 text-black font-bold uppercase tracking-widest text-xs sm:text-sm border-none hover:opacity-90 transition-opacity"
                 style={{ background: "linear-gradient(135deg, #39FF14, #0022FF)" }}
                 data-testid="buy-now-button"
               >
@@ -370,7 +370,7 @@ export default function ProductDetail() {
               </Button>
               <Button
                 variant="outline"
-                className="flex-1 h-14 font-bold uppercase tracking-widest text-sm border-white/20 text-white hover:border-[#39FF14]/60 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all"
+                className="flex-1 h-12 sm:h-14 font-bold uppercase tracking-widest text-xs sm:text-sm border-white/20 text-white hover:border-[#39FF14]/60 hover:text-[#39FF14] hover:bg-[#39FF14]/5 transition-all"
                 data-testid="make-offer-button"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
@@ -380,7 +380,7 @@ export default function ProductDetail() {
 
             <Button
               variant="ghost"
-              className="w-full h-10 text-gray-400 hover:text-white text-xs font-mono border border-white/5 hover:border-white/15 transition-all"
+              className="w-full h-10 text-gray-400 hover:text-white text-[10px] sm:text-xs font-mono border border-white/5 hover:border-white/15 transition-all"
               data-testid="share-button"
             >
               <Share2 className="w-3.5 h-3.5 mr-2" />
