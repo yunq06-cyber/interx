@@ -18,27 +18,27 @@ export const translations = {
       line2: "",
       line3: "Breaking Trust Barriers",
       sub: "Safely access Xianyu (Goofish), Asia's largest supply pool. Our destructive NFC tags prevent part-swapping scams during transit at the source.",
-      cta1: "URL Parsing & Quote Request",
+      cta1: "Describe Item & Get Quote",
       cta2: "Usage guide",
     },
     chat: {
       title: "interX Smart Assistant",
-      welcome: "Hello! Paste a Xianyu URL and we'll extract metadata and provide a professional quote instantly.",
-      placeholder: "Paste Xianyu/Taobao URL here...",
+      welcome: "Hello! Tell us what item you're looking for, and our professional buyers will find it and provide a quote instantly.",
+      placeholder: "Describe the product you want...",
       online: "Online",
     },
     portal: {
-      title: "Xianyu (Goofish) Real-time Exploration",
-      desc: "Paste the URL of the product you want, and we'll handle the rest.",
-      cta: "Analyze Link",
+      title: "Expert Product Sourcing",
+      desc: "Tell us what you're looking for, and we'll handle the search and verification.",
+      cta: "Find My Item",
     },
     how: {
       heading: "Concierge Workflow",
       sub: "A secure infrastructure combining physical verification with on-chain trust.",
       steps: [
         {
-          title: "Real-time AI Parsing",
-          desc: "Paste a Xianyu URL. Our engine extracts metadata, translates details, and provides a professional quote instantly.",
+          title: "Expert Sourcing",
+          desc: "Describe what you want. Our professional buyers search the market to find the best quality items at the best prices.",
         },
         {
           title: "Integrated Safe Escrow",
@@ -88,7 +88,7 @@ export const translations = {
         },
         {
           q: "How long does the entire process take?",
-          a: "Typically 7-12 business days from the moment you paste the URL to receiving the item at your doorstep, including inspection and cross-border logistics.",
+          a: "Typically 7-12 business days from the moment you request a search to receiving the item at your doorstep, including inspection and cross-border logistics.",
         }
       ],
     },
@@ -125,6 +125,21 @@ export const translations = {
       art: "Art",
       music: "Music",
       games: "Games",
+    },
+    search: {
+      allCategories: "All Categories",
+      placeholder: "Describe the item you're looking for...",
+      button: "Find My Item",
+      popular: "Trending Requests",
+      categories: {
+        electronics: "Electronics",
+        fashion: "Fashion",
+        collectibles: "Collectibles",
+        vehicles: "Vehicles",
+        sports: "Sports",
+        books: "Books",
+        home: "Home",
+      }
     },
     card: {
       viewListing: "View Listing",
@@ -216,27 +231,27 @@ export const translations = {
       line2: "",
       line3: "亚洲跨境二手电商",
       sub: "安全获取亚洲最大供应池闲鱼 (Goofish) 的商品。通过破坏型 NFC 标签从根本上阻断配送过程中的掉包诈骗。",
-      cta1: "URL 解析及请求报价",
+      cta1: "描述商品及请求报价",
       cta2: "使用指南",
     },
     chat: {
       title: "interX 智能助手",
-      welcome: "您好！请粘贴闲鱼商品链接，我们将通过按需解析技术为您实时提取元数据并提供专业报价。",
-      placeholder: "粘贴闲鱼/淘宝链接...",
+      welcome: "您好！请告诉我们您想买的商品，我们的专业买手将为您在全球市场进行搜寻并提供实时报价。",
+      placeholder: "描述您想要的商品...",
       online: "在线",
     },
     portal: {
-      title: "闲鱼(Goofish) 实时探索",
-      desc: "请输入您心仪商品的 URL，剩下的交给 interX。",
-      cta: "解析链接",
+      title: "专业商品搜寻",
+      desc: "告诉我们您想要什么，剩下的交给 interX 的专业买手。",
+      cta: "帮我找货",
     },
     how: {
       heading: "代买服务流程",
       sub: "结合物理验证与链上信任的数字化贸易基础设施。",
       steps: [
         {
-          title: "实时 AI 解析与报价",
-          desc: "只需粘贴闲鱼 URL，我们的引擎将实时提取元数据、翻译详情并提供专业报价。",
+          title: "专业搜寻与报价",
+          desc: "只需描述需求，我们的专业买手将搜寻最优质的货源并提供最具竞争力的报价。",
         },
         {
           title: "综合安全支付托管",
@@ -286,7 +301,7 @@ export const translations = {
         },
         {
           q: "整个流程需要多长时间？",
-          a: "从您粘贴 URL 到商品送达家门，通常需要 7-12 个工作日，其中包括质检和跨境物流时间。",
+          a: "从您提交需求到商品送达家门，通常需要 7-12 个工作日，其中包括搜寻、质检和跨境物流时间。",
         }
       ],
     },
@@ -323,6 +338,21 @@ export const translations = {
       art: "艺术收藏",
       music: "音乐器材",
       games: "游戏设备",
+    },
+    search: {
+      allCategories: "全部分类",
+      placeholder: "描述您想要的商品...",
+      button: "帮我找货",
+      popular: "热门搜寻",
+      categories: {
+        electronics: "数码家电",
+        fashion: "时尚服饰",
+        collectibles: "兴趣收藏",
+        vehicles: "汽车交通",
+        sports: "运动户外",
+        books: "图书音像",
+        home: "居家生活",
+      }
     },
     card: {
       viewListing: "查看详情",
@@ -414,27 +444,27 @@ export const translations = {
       line2: "",
       line3: "아시아 크로스보더 중고 커머스",
       sub: "아시아 최대 공급풀 시엔위(閑魚)의 매물을 안전하게. 파괴형 NFC 태그로 배송 중 바꿔치기 사기를 원천 차단합니다.",
-      cta1: "URL 파싱 및 견적 요청",
+      cta1: "상품 요청 및 견적 받기",
       cta2: "이용 가이드",
     },
     chat: {
       title: "interX Smart Assistant",
-      welcome: "안녕하세요! 시엔위 URL을 붙여넣어 주시면 온디맨드 파싱 기술로 실시간 메타데이터 추출 및 전문 견적을 도와드립니다.",
-      placeholder: "시엔위/타오바오 URL을 입력하세요...",
+      welcome: "안녕하세요! 찾으시는 상품을 말씀해 주시면, 전문 바이어가 전 세계 시장을 뒤져 최적의 매물과 견적을 실시간으로 안내해 드립니다.",
+      placeholder: "원하시는 상품을 설명해 주세요...",
       online: "온라인",
     },
     portal: {
-      title: "시엔위(閑魚) 실시간 탐색",
-      desc: "원하는 상품의 URL을 입력하세요. interX가 나머지를 처리합니다.",
-      cta: "링크 분석하기",
+      title: "전문 상품 소싱",
+      desc: "찾으시는 상품을 말씀해 주세요. interX 전문 바이어가 검색부터 검수까지 처리합니다.",
+      cta: "상품 찾아보기",
     },
     how: {
       heading: "컨시어지 서비스 프로세스",
       sub: "물리적 검수와 온체인 신뢰가 결합된 디지털 무역 인프라.",
       steps: [
         {
-          title: "실시간 AI 파싱 및 견적",
-          desc: "시엔위 URL을 붙여넣으면 엔진이 메타데이터 추출, 상세 내용 번역 및 전문 견적을 실시간으로 제공합니다.",
+          title: "전문 소싱 및 견적",
+          desc: "찾으시는 상품을 설명해 주세요. 전문 바이어가 시장을 검색하여 가장 좋은 조건의 매물을 찾아 즉시 견적을 제공합니다.",
         },
         {
           title: "통합 안전 에스크로 결제",
@@ -484,7 +514,7 @@ export const translations = {
         },
         {
           q: "전체 프로세스는 얼마나 걸리나요?",
-          a: "URL을 붙여넣은 시점부터 집 앞까지 상품을 수령하기까지 검수 및 해외 배송을 포함하여 보통 영업일 기준 7-12일이 소요됩니다.",
+          a: "상품 요청 시점부터 집 앞까지 상품을 수령하기까지 소싱, 검수 및 해외 배송을 포함하여 보통 영업일 기준 7-12일이 소요됩니다.",
         }
       ],
     },
@@ -521,6 +551,21 @@ export const translations = {
       art: "예술/수집",
       music: "음악/악기",
       games: "게임/PC",
+    },
+    search: {
+      allCategories: "전체 카테고리",
+      placeholder: "원하시는 상품을 설명해 주세요...",
+      button: "상품 찾아보기",
+      popular: "인기 요청",
+      categories: {
+        electronics: "전자제품",
+        fashion: "패션/잡화",
+        collectibles: "취미/수집",
+        vehicles: "자동차/교통",
+        sports: "스포츠/레저",
+        books: "도서/음반",
+        home: "가구/생활",
+      }
     },
     card: {
       viewListing: "상품 보기",

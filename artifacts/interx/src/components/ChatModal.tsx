@@ -57,8 +57,8 @@ export function ChatModal({ open, onClose }: ChatModalProps) {
       setIsSubmitting(false);
       setSubmitted(true);
       toast({ 
-        title: "解析成功！", 
-        description: "我们已收到您的验货请求，将通过 Web3 芯片为您生成专属报价单。" 
+        title: "请求已提交！", 
+        description: "专业买手已收到您的找货请求，我们将为您在全球市场进行搜寻并提供报价。" 
       });
     }, 1500);
 
@@ -68,7 +68,7 @@ export function ChatModal({ open, onClose }: ChatModalProps) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          xianyuLink: inputValue,
+          productDescription: inputValue,
           userNotes,
           expectedPrice
         })
@@ -147,7 +147,7 @@ export function ChatModal({ open, onClose }: ChatModalProps) {
                       <Sparkles className="w-6 h-6 text-[#39FF14]" />
                     </motion.div>
                   </div>
-                  <p className="text-[#39FF14] font-mono text-[10px] uppercase tracking-[0.2em] animate-pulse">Analyzing link data...</p>
+                  <p className="text-[#39FF14] font-mono text-[10px] uppercase tracking-[0.2em] animate-pulse">Searching for products...</p>
                 </div>
               )}
 
@@ -155,7 +155,7 @@ export function ChatModal({ open, onClose }: ChatModalProps) {
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
                   <div className="flex items-center gap-3 text-[#39FF14] bg-[#39FF14]/5 border border-[#39FF14]/20 rounded-2xl p-4">
                     <CheckCircle2 className="w-5 h-5" />
-                    <span className="text-sm font-bold">✅ 링크 분석 완료! (Analysis Complete)</span>
+                    <span className="text-sm font-bold">✅ 搜寻完成！ (Search Complete)</span>
                   </div>
                   
                   <div className="space-y-4">
