@@ -28,9 +28,9 @@ export const translations = {
       online: "Online",
     },
     portal: {
-      title: "Expert Product Sourcing",
-      desc: "Tell us what you're looking for, and we'll handle the search and verification.",
-      cta: "Find My Item",
+      title: "Xianyu (Goofish) Real-time Exploration",
+      desc: "Browse Asia's largest second-hand market and tell us what you find.",
+      cta: "Start Exploring",
     },
     how: {
       heading: "Concierge Workflow",
@@ -42,7 +42,7 @@ export const translations = {
         },
         {
           title: "Integrated Safe Escrow",
-          desc: "Securely pay via our global system. We bypass real-name and local payment barriers for a seamless checkout.",
+          desc: "Securely pay via our global system. We handle cross-border payment complexities through our verified enterprise system for a seamless checkout.",
         },
         {
           title: "Professional Inspection",
@@ -80,7 +80,7 @@ export const translations = {
         },
         {
           q: "Is payment on Xianyu (Goofish) really possible for foreigners?",
-          a: "Yes. interX uses an integrated corporate payment system that bypasses individual real-name verification and local payment barriers, handling the settlement securely for you.",
+          a: "Yes. interX uses an integrated corporate payment system that manages individual payment requirements and regional barriers, handling the settlement securely for you.",
         },
         {
           q: "What happens if an item fails the professional inspection?",
@@ -241,9 +241,9 @@ export const translations = {
       online: "在线",
     },
     portal: {
-      title: "专业商品搜寻",
-      desc: "告诉我们您想要什么，剩下的交给 interX 的专业买手。",
-      cta: "帮我找货",
+      title: "闲鱼(Goofish) 实时探索",
+      desc: "浏览亚洲最大的二手市场，告诉我们您的心仪之选。",
+      cta: "开始探索",
     },
     how: {
       heading: "代买服务流程",
@@ -255,7 +255,7 @@ export const translations = {
         },
         {
           title: "综合安全支付托管",
-          desc: "通过我们的全球系统安全支付。我们绕过实名认证和本地支付障碍，实现无缝结算。",
+          desc: "通过我们的全球系统安全支付。我们通过经过验证的企业级系统解决跨境支付门槛，实现无缝结算。",
         },
         {
           title: "专业硬件精密质检",
@@ -263,7 +263,7 @@ export const translations = {
         },
         {
           title: "Web3 NFC 芯片封印",
-          desc: "在质检合格的机器上粘贴破坏型 NFC 标签。任何拆解尝试都会立即使链上 NFT 证书失效。",
+          desc: "在质检合格 of 机器上粘贴破坏型 NFC 标签。任何拆解尝试都会立即使链上 NFT 证书失效。",
         },
         {
           title: "NFC 验货与资金释放",
@@ -293,7 +293,7 @@ export const translations = {
         },
         {
           q: "外国人真的可以在闲鱼上支付吗？",
-          a: "是的。interX 使用企业级综合支付系统，绕过个人实名认证和本地支付障碍，为您安全处理资金结算。",
+          a: "是的。interX 使用企业级综合支付系统，解决个人支付限制和地域障碍，为您安全处理资金结算。",
         },
         {
           q: "如果商品没通过专业质检怎么办？",
