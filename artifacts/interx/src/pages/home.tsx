@@ -5,6 +5,7 @@ import { CategoryStrip } from "@/components/CategoryStrip";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FAQ } from "@/components/FAQ";
 import { XianyuPortal } from "@/components/XianyuPortal";
+import { NFCSecuritySection } from "@/components/NFCSecuritySection";
 import { Footer } from "@/components/Footer";
 import { NetworkBackground } from "@/components/NetworkBackground";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <main>
           <HeroSection />
           <XianyuPortal />
+          <NFCSecuritySection />
           <VisionServices />
           <CategoryStrip />
           <HowItWorks />

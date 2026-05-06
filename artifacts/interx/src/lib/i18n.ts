@@ -34,29 +34,47 @@ export const translations = {
     },
     how: {
       heading: "Concierge Workflow",
-      sub: "A secure infrastructure combining physical verification with on-chain trust.",
+      sub: "Next-generation device security solution connecting NFC authentication and Web3 inspection history.",
       steps: [
         {
-          title: "Expert Sourcing",
-          desc: "Describe what you want. Our professional buyers search the market to find the best quality items at the best prices.",
+          title: "Apply Security Seal",
+          desc: "A destructive security seal is attached to the device's entry points or critical components after professional inspection.",
         },
         {
-          title: "Integrated Safe Escrow",
-          desc: "Securely pay via our global system. We address cross-border payment barriers through our verified enterprise system for a seamless checkout.",
+          title: "NFC Tag Recognition",
+          desc: "Automatic recognition by simply touching your smartphone to the seal, ensuring a quick and easy verification process.",
         },
         {
-          title: "Professional Inspection",
-          desc: "Items arrive at our B-Node centers for precision diagnosis of motherboards, screens, and internal components.",
+          title: "Verify History",
+          desc: "Check the Web3-based inspection history and authenticity instantly. Transparent records you can trust.",
         },
         {
-          title: "Web3 NFC Chip Seal",
-          desc: "A destructive NFC tag is attached to verified units. Tampering invalidates the on-chain NFT certificate instantly.",
-        },
-        {
-          title: "NFC Verification & Release",
-          desc: "Receive your item and scan the chip with your phone. Once integrity is confirmed, funds are released to the seller.",
+          title: "Web3 Synchronization",
+          desc: "Immutable records are linked and stored on a decentralized ledger, preventing any future tampering or scams.",
         }
       ],
+    },
+    nfc: {
+      title: "interX Web3-NFC Security Chip",
+      subtitle: "Device-attached Security Seal | Damaged upon removal | Non-reusable",
+      desc: "The core technology preventing part-swapping scams and ensuring global trade trust.",
+      layers: [
+        { name: "Protective Film", desc: "Scratch-resistant outer layer" },
+        { name: "Printing Layer", desc: "High-precision interX branding" },
+        { name: "NFC Antenna", desc: "Seamless wireless communication" },
+        { name: "Secure Element", desc: "Hardware-grade encryption chip" },
+        { name: "Tamper Layer", desc: "Destructive mesh pattern" },
+        { name: "Adhesive", desc: "Ultra-strong industrial bonding" }
+      ],
+      features: [
+        { title: "Tamper-Evident", desc: "Antenna breaks upon any removal attempt" },
+        { title: "Immediate ID", desc: "Instant visual and digital detection of tampering" },
+        { title: "Global Compatible", desc: "Supports all NFC-enabled smartphones" }
+      ],
+      applications: {
+        title: "Application Fields",
+        items: ["Laptops & PC", "Cameras & Lenses", "Smartphones & Tablets", "Game Consoles"]
+      }
     },
     pricing: {
       title: "Fee Schedule & Warranty Premium",
@@ -247,29 +265,47 @@ export const translations = {
     },
     how: {
       heading: "代买服务流程",
-      sub: "结合物理验证与链上信任的数字化贸易基础设施。",
+      sub: "连接 NFC 认证与 Web3 质检历史的次世代设备安全解决方案。",
       steps: [
         {
-          title: "专业搜寻与报价",
-          desc: "只需描述需求，我们的专业买手将搜寻最优质的货源并提供最具竞争力的报价。",
+          title: "粘贴安全封印",
+          desc: "在经过专业质检后，将具有破坏特性的安全封条粘贴在设备的开口处或核心部件上。",
         },
         {
-          title: "综合安全支付托管",
-          desc: "通过我们的全球系统安全支付。我们通过经过验证的企业级系统解决跨境支付门槛，实现无缝结算。",
+          title: "NFC 标签识别",
+          desc: "只需将智能手机靠近封条即可自动识别，确保验证过程快速、简便。",
         },
         {
-          title: "专业硬件精密质检",
-          desc: "商品将送往我们的 B-Node 中心，对主板、屏幕和内部组件进行精密的功能诊断。",
+          title: "验证质检记录",
+          desc: "即时查询基于 Web3 的质检历史和真伪信息，公开透明的记录值得信赖。",
         },
         {
-          title: "Web3 NFC 芯片封印",
-          desc: "在质检合格机器上粘贴破坏型 NFC 标签。任何拆解尝试都会立即使链上 NFT 证书失效。",
-        },
-        {
-          title: "NFC 验货与资金释放",
-          desc: "收货后用手机扫描芯片。确认机器完整性后，系统将向卖家释放托管资金。",
+          title: "Web3 数据同步",
+          desc: "不可篡改的记录将同步并存储在去中心化账本中，防止未来任何形式的篡改或欺诈。",
         }
       ],
+    },
+    nfc: {
+      title: "interX Web3-NFC 破坏型安全芯片",
+      subtitle: "设备贴附型安全封印 | 拆解即损 | 不可重复粘贴",
+      desc: "阻断零件掉包诈骗、确保全球贸易信任的核心技术。",
+      layers: [
+        { name: "保护膜", desc: "防刮擦外部保护层" },
+        { name: "印刷层", desc: "高精度 interX 品牌标识" },
+        { name: "NFC 天线", desc: "无缝无线通讯" },
+        { name: "安全元件", desc: "硬件级加密芯片" },
+        { name: "破坏型层", desc: "特制的破坏型网格图案" },
+        { name: "粘合层", desc: "工业级超强力粘合" }
+      ],
+      features: [
+        { title: "防拆可见", desc: "任何拆卸尝试都会导致天线断裂" },
+        { title: "即时识别", desc: "即时视觉和数字双重检测拆改" },
+        { title: "全球兼容", desc: "支持所有具备 NFC 功能的智能手机" }
+      ],
+      applications: {
+        title: "应用领域",
+        items: ["笔记本电脑与 PC", "相机与镜头", "智能手机与平板", "游戏机与电子产品"]
+      }
     },
     pricing: {
       title: "区间手续费及芯片保修溢价",
@@ -460,29 +496,47 @@ export const translations = {
     },
     how: {
       heading: "컨시어지 서비스 프로세스",
-      sub: "물리적 검수와 온체인 신뢰가 결합된 디지털 무역 인프라.",
+      sub: "NFC 인증과 Web3 검수 이력을 연결하는 차세대 기기 보안 솔루션.",
       steps: [
         {
-          title: "전문 소싱 및 견적",
-          desc: "찾으시는 상품을 설명해 주세요. 전문 바이어가 시장을 검색하여 가장 좋은 조건의 매물을 찾아 즉시 견적을 제공합니다.",
+          title: "보안 씰 부착",
+          desc: "전문 검수 완료 후 기기 개봉부나 접근 포인트에 파손형 보안 씰을 부착합니다.",
         },
         {
-          title: "통합 안전 에스크로 결제",
-          desc: "글로벌 시스템을 통해 안전하게 결제하세요. 검증된 기업형 시스템을 통해 국경 간 결제 장벽을 해결하고 간편한 체크아웃을 지원합니다.",
+          title: "NFC 태그 인식",
+          desc: "스마트폰을 대면 자동으로 인식되어 쉽고 빠르게 진위 여부를 확인할 수 있습니다.",
         },
         {
-          title: "전문 하드웨어 정밀 검수",
-          desc: "매물이 B-Node 센터에 도착하면 메인보드, 디스플레이 및 내부 부품에 대한 정밀 기능 진단을 실시합니다.",
+          title: "검수 이력 확인",
+          desc: "Web3 기반의 투명한 검수 이력 및 정품 인증 정보를 즉시 확인하세요.",
         },
         {
-          title: "Web3 NFC 검수 칩 부착",
-          desc: "검수 완료 기기에 파괴형 NFC 태그를 부착합니다. 임의 분해 시 온체인 NFT 인증서가 즉시 무효화되어 무결성을 보장합니다.",
-        },
-        {
-          title: "NFC 검수 및 대금 지급",
-          desc: "상품 수령 후 스마트폰으로 칩을 스캔하세요. 기기 무결성 확인 시 판매자에게 에스크로 대금이 지급됩니다.",
+          title: "Web3 기록 연동",
+          desc: "변조 불가능한 분산 원장에 기록을 저장하여 향후 발생할 수 있는 사기를 원천 차단합니다.",
         }
       ],
+    },
+    nfc: {
+      title: "interX Web3-NFC 파손형 보안 칩",
+      subtitle: "기기 부착형 보안 씰 | 분리 시 즉시 손상 | 재부착 불가",
+      desc: "부품 바꿔치기 사기를 방지하고 글로벌 거래의 신뢰를 확보하는 핵심 기술.",
+      layers: [
+        { name: "보호 필름", desc: "내스크래치성 외부 보호층" },
+        { name: "인쇄층", desc: "고정밀 interX 브랜드 로고" },
+        { name: "NFC 안테나", desc: "원활한 무선 통신 레이어" },
+        { name: "보안 칩", desc: "하드웨어급 보안 요소(Secure Element)" },
+        { name: "파손형 메쉬층", desc: "분리 시 파손되는 특수 패턴" },
+        { name: "강점착 접착층", desc: "산업용 초강력 접착 레이어" }
+      ],
+      features: [
+        { title: "파손 즉시 식별", desc: "임의 제거 시 안테나가 즉시 파손됨" },
+        { title: "재부착 불가", desc: "한 번 분리되면 재사용이 불가능한 구조" },
+        { title: "글로벌 호환", desc: "모든 NFC 지원 스마트폰에서 사용 가능" }
+      ],
+      applications: {
+        title: "활용 분야",
+        items: ["노트북 · PC", "카메라 · 렌즈", "스마트폰 · 태블릿", "게임기 · 전자기기"]
+      }
     },
     pricing: {
       title: "구간별 수수료 및 칩 보증 프리미엄",

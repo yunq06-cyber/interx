@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { SearchCode, ShieldCheck, Cpu, CreditCard, Truck } from "lucide-react";
+import { ShieldCheck, Smartphone, Search, Database } from "lucide-react";
 import { useLang } from "@/contexts/LanguageContext";
 
-const ICONS = [SearchCode, CreditCard, ShieldCheck, Cpu, Truck];
+const ICONS = [ShieldCheck, Smartphone, Search, Database];
 
 export function HowItWorks() {
   const { t } = useLang();
@@ -21,7 +21,7 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Animated line behind icons (desktop only) */}
           <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-[1px] bg-white/10 z-0">
             <div className="h-full w-full" style={{ background: "linear-gradient(90deg, transparent, #39FF14, transparent)", opacity: 0.5 }} />
