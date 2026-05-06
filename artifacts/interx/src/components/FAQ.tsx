@@ -8,7 +8,11 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-black border-t border-white/5 relative overflow-hidden" id="faq">
+    <section 
+      className="py-24 bg-black border-t border-white/5 relative overflow-hidden" 
+      id="faq"
+      style={{ contentVisibility: 'auto', containIntrinsicSize: '0 800px' } as React.CSSProperties}
+    >
       {/* Background glow */}
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] opacity-5 blur-[120px] pointer-events-none" 
         style={{ background: "radial-gradient(circle, #0022FF, transparent)" }} />

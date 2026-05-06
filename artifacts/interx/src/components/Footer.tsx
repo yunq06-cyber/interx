@@ -48,9 +48,13 @@ export function Footer() {
           <p className="text-gray-600 text-xs mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} interX Protocol. {f.rights}
           </p>
-          <div className="flex items-center space-x-2 text-xs text-gray-600 font-mono">
-            <span className="w-2 h-2 rounded-full bg-[#39FF14]"></span>
-            <span>{f.system}</span>
+          <div className="flex items-center space-x-4 text-[10px] text-gray-600 font-mono">
+            <div className="flex items-center space-x-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#39FF14]"></span>
+              <span>{f.system}</span>
+            </div>
+            <span className="text-gray-800">|</span>
+            <span>v0.2.0</span>
           </div>
         </div>
       </div>
