@@ -42,7 +42,7 @@ export const translations = {
         },
         {
           title: "Integrated Safe Escrow",
-          desc: "Securely pay via our global system. We handle cross-border payment complexities through our verified enterprise system for a seamless checkout.",
+          desc: "Securely pay via our global system. We address cross-border payment barriers through our verified enterprise system for a seamless checkout.",
         },
         {
           title: "Professional Inspection",
@@ -263,7 +263,7 @@ export const translations = {
         },
         {
           title: "Web3 NFC 芯片封印",
-          desc: "在质检合格 of 机器上粘贴破坏型 NFC 标签。任何拆解尝试都会立即使链上 NFT 证书失效。",
+          desc: "在质检合格机器上粘贴破坏型 NFC 标签。任何拆解尝试都会立即使链上 NFT 证书失效。",
         },
         {
           title: "NFC 验货与资金释放",
@@ -454,9 +454,9 @@ export const translations = {
       online: "온라인",
     },
     portal: {
-      title: "전문 상품 소싱",
-      desc: "찾으시는 상품을 말씀해 주세요. interX 전문 바이어가 검색부터 검수까지 처리합니다.",
-      cta: "상품 찾아보기",
+      title: "시엔위(閑魚) 실시간 탐색",
+      desc: "아시아 최대 중고 시장을 둘러보고 마음에 드는 상품을 말씀해 주세요.",
+      cta: "탐색 시작하기",
     },
     how: {
       heading: "컨시어지 서비스 프로세스",
@@ -468,7 +468,7 @@ export const translations = {
         },
         {
           title: "통합 안전 에스크로 결제",
-          desc: "글로벌 시스템을 통해 안전하게 결제하세요. 실명 인증 및 로컬 결제 장벽을 우회하여 간편한 체크아웃을 지원합니다.",
+          desc: "글로벌 시스템을 통해 안전하게 결제하세요. 검증된 기업형 시스템을 통해 국경 간 결제 장벽을 해결하고 간편한 체크아웃을 지원합니다.",
         },
         {
           title: "전문 하드웨어 정밀 검수",
@@ -506,7 +506,7 @@ export const translations = {
         },
         {
           q: "외국인도 정말 시엔위(閑魚)에서 결제가 가능한가요?",
-          a: "네. interX는 개인 실명 인증 및 로컬 결제 장벽을 우회하는 기업형 통합 결제 시스템을 사용하여 고객님을 대신해 안전하게 대금을 결제합니다.",
+          a: "네. interX는 개인 결제 제한 및 지역적 장벽을 해결하는 기업형 통합 결제 시스템을 사용하여 고객님을 대신해 안전하게 대금을 결제합니다.",
         },
         {
           q: "상품이 전문 검수에서 탈락하면 어떻게 되나요?",
